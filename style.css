@@ -1,6 +1,5 @@
 html {
-	background: url("images/another mountain.jpg") no-repeat center center fixed,
-	url("images/blurred edges.png") repeat-x top left;
+	background: url("images/another mountain.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -23,6 +22,7 @@ h1,h2,h3 {
 	line-height:1.2
 }
 
+/* Navigation bar */
 div#nav ul {
 	list-style-type: none;
 	margin: 0;
