@@ -32,7 +32,6 @@ div#nav ul {
 div#nav li a{
 	display: inline-block;
 	padding: 0px 16px;
-	text-decoration: none;
 }
 div#nav li {
     display: inline;
