@@ -10,7 +10,7 @@ body {
 	font-weight: 300;
 	font-family: 'Ubuntu', sans-serif;
 	text-align: center;
-    margin:5% auto;
+    margin:65px auto;
     max-width:650px;
     line-height:1.6;
     font-size:18px;
@@ -39,7 +39,6 @@ div#nav li {
 
 hr {
     display: block;
-    height: 1px;
     border: 0;
     border-top: 1px solid #FFF;
     margin: 1em 0;
