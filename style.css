@@ -1,17 +1,17 @@
 html {
-	background: url("images/mountain blurred no edge.png") no-repeat center center fixed, 
+	background: url("images/another mountain.jpg") no-repeat center center fixed,
 	url("images/blurred edges.png") repeat-x top left;
-	-webkit-background-size: auto 100%;
-	-moz-background-size: auto 100%;
-	-o-background-size: auto 100%;
-	background-size: auto 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	background-color: #0B0E1B;
 }
 body {
 	font-weight: 300;
 	font-family: 'Ubuntu', sans-serif;
 	text-align: center;
-    margin:15% auto;
+    margin:5% auto;
     max-width:650px;
     line-height:1.6;
     font-size:18px;
@@ -21,6 +21,30 @@ body {
 h1,h2,h3 {
 	font-weight: 400;
 	line-height:1.2
+}
+
+div#nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+div#nav li a{
+	display: inline-block;
+	padding: 0px 16px;
+	text-decoration: none;
+}
+div#nav li {
+    display: inline;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #FFF;
+    margin: 1em 0;
+    padding: 0;
 }
 /* unvisited link */
 a:link {
