@@ -10,7 +10,7 @@ body {
 	font-weight: 300;
 	font-family: 'Ubuntu', sans-serif;
 	text-align: center;
-  margin:65px auto;
+  margin:15% auto;
   max-width:550px;
   line-height:1.6;
   font-size:18px;
@@ -64,6 +64,6 @@ a:hover {
 }
 /* selected link */
 a:active {
-    color: hotpink;
+    color: #99ccff;
     text-decoration: underline;
 }
