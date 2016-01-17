@@ -2,10 +2,14 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
-img {
+#resume {
   display: block;
   margin: 0 auto;
   width: 900px;
+}
+
+#resume img {
+  width: 100%;
 }
 
 h2 {
