@@ -2,28 +2,49 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
-#resume {
-  display: block;
-  margin: 0 auto;
-  width: 900px;
-}
-
-#resume img {
-  width: 100%;
-}
-
 h2 {
   color: #666666;
   text-align: center;
   margin-bottom: 0;
 }
 
+#resume {
+  display: block;
+  margin: 0 auto;
+  width: 900px;
+}
+#resume img {
+  width: 100%;
+}
+
 a:link, a:visited {
   color: #666666;
   text-decoration: none;
 }
-
 a:hover, a:active {
   color: #2079c7;
+  font-weight: bold;
+}
+
+#projects {
+  margin: 30px auto;
+  width: 600px;
+  text-align: center;
+}
+
+.project img {
+  width: 49%;
+  float: right;
+}
+
+.project p {
+  text-align: right;
+  width: 49%;
+  float: left;
+  margin: 0;
+}
+
+.project .title {
+  font-size: 14pt;
   font-weight: bold;
 }
