@@ -1,11 +1,18 @@
-body{
+body {
   font-family: 'Open Sans', sans-serif;
 }
 
-h2 {
-  color: #666666;
+h1, h2, p {
   text-align: center;
   margin-bottom: 0;
+}
+
+h2, h2 a:link, h2 a:visited {
+  color: #666666;
+}
+
+h1 {
+  font-weight: bold;
 }
 
 #resume {
@@ -18,10 +25,12 @@ h2 {
 }
 
 a:link, a:visited {
-  color: #666666;
   text-decoration: none;
 }
-a:hover, a:active {
+body a:link, body a:visited {
+  color: inherit;
+}
+body a:hover, body a:active {
   color: #2079c7;
   font-weight: bold;
 }
@@ -32,18 +41,26 @@ a:hover, a:active {
   text-align: center;
 }
 
+hr {
+  clear: both;
+  margin: 15px 0;
+}
+
+.project {
+  overflow: hidden;
+}
 .project img {
   width: 49%;
-  float: right;
-}
-
-.project p {
-  text-align: right;
-  width: 49%;
-  float: left;
+  display: block;
   margin: 0;
 }
-
+.project p {
+  width: 49%;
+  text-align: right;
+  margin: 0 2% auto 0;
+  padding: 0;
+  float: left;
+}
 .project .title {
   font-size: 14pt;
   font-weight: bold;
