@@ -2,10 +2,6 @@
   "use strict";
 
   window.onload = function() {
-    fadeInInfo();
-  }
-
-  function fadeInInfo() {
     var el = document.getElementById("fadecontent");
     var opacity = 0;
     var fadeTimer = setInterval(function () {
