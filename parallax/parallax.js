@@ -39,7 +39,6 @@ function addParallax(id, img, width, height, weight, left, right, top, bottom) {
 
   item.appendChild(image);
   document.querySelector("body").appendChild(item);
-
 }
 
 function createParallaxCSS() {
