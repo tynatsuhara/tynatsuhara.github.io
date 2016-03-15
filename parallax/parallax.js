@@ -1,4 +1,5 @@
 var xPercent;
+var yPercent;
 
 // This should be called by the client js from their window.onload
 function configureParallax() {
@@ -8,20 +9,21 @@ function configureParallax() {
 };
 
 /*
-  Besides configureParallax, this is the only method that should be called externally.
+  Adds a parallax image object to the body of the page.
   The method  takes an id, image url, width, and height (preferably in %). Then,
-  it takes a weight parameter. This is the max % that it will shift left or right.
+  it takes two weight parameters. These are the max % that it will shift left/right/up/down
   dependent on the mouse. Can be positive or negative, positive shifts towards mouse.
   After that, it takes 4 parameters for left, right, top, and bottom. Pass "auto"
   if you don't want to modify a position value.
 */
-function addParallax(id, img, width, height, weight, left, right, top, bottom) {
+function addParallaxImage(id, img, width, height, xWeight, yWeight, left, right, top, bottom) {
   var item = document.createElement("div");
   item.className = "parallax-item";
   item.style.position = "absolute";
   item.style.width = "100%";
   item.style.height = "100%";
-  item.parallaxWeight = weight;
+  item.xParallaxWeight = xWeight;
+  item.yParallaxWeight = yWeight;
 
   var image = document.createElement("img");
   image.src = img;
@@ -52,13 +54,14 @@ function createParallaxCSS() {
 
 function setMousePos(event) {
   xPercent = event.clientX * 1.0 / window.innerWidth;
+  yPercent = event.clientY * 1.0 / window.innerHeight;
 }
 
 function moveParallaxItems() {
   var pItems = document.querySelectorAll(".parallax-item");
   for (var i = 0; i < pItems.length; i++) {
-    console.log(2 * xPercent - 1);
-    pItems[i].style.left = (2 * xPercent - 1) * pItems[i].parallaxWeight + "%";
+    pItems[i].style.left = (2 * xPercent - 1) * pItems[i].xParallaxWeight + "%";
+    pItems[i].style.top = (2 * yPercent - 1) * pItems[i].yParallaxWeight + "%";
   }
 }
 
