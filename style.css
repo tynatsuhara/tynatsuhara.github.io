@@ -13,6 +13,9 @@ a {
 	text-decoration: none;
 	color: #aaa;
 }
+a:hover {
+	background-color: #404040;
+}
 hr {
 	color: #aaa;
 	border: none;
