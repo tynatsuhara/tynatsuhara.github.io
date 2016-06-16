@@ -2,21 +2,13 @@
   "use strict";
 
   window.onload = function() {
-    addInterests();
+    var interests = ["corgis", "having too many projects", "breakfast food",
+                     "going on reddit too much", "trying to be good at pool"];
+    $("random").innerHTML = interests[Math.floor(Math.random() * interests.length)];
+
     writeText("tyler bonnell", "name");
     $("projects").onclick = function() {
       writeText("projects", "projectsTitle")
-    }
-  }
-
-  function addInterests() {
-    var interests = ["making video games", "corgis", "movies", "not finishing projects",
-                     "breakfast food", "CS education/outreach"];
-    var spots = document.querySelectorAll(".interest");
-    for (var i = 0; i < spots.length; i++) {
-      var index = Math.floor(Math.random() * interests.length);
-      spots[i].innerHTML = interests[index];
-      interests.splice(index, 1);
     }
   }
 
@@ -27,7 +19,6 @@
   var writing;
   var headerTimer;
   function writeText(txt, id) {
-    if (id == cursorContainer) return;
     if (cursorContainer) {
       $(cursorContainer).innerHTML = writing;
       if (headerTimer) clearInterval(headerTimer);
