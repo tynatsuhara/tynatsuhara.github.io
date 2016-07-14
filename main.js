@@ -2,10 +2,6 @@
   "use strict";
 
   window.onload = function() {
-    var interests = ["corgis", "having too many projects", "breakfast food",
-                     "going on reddit too much", "trying to be good at pool"];
-    $("random").innerHTML = interests[Math.floor(Math.random() * interests.length)];
-
     writeText("tyler bonnell", "name");
     $("projects").onclick = function() {
       writeText("projects", "projectsTitle")
