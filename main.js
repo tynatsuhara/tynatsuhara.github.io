@@ -4,9 +4,25 @@
   window.onload = function() {
     writeText("tyler bonnell", "name");
     $("projects").onclick = function() {
-      writeText("projects", "projectsTitle")
+      if (hasClickedProjects)
+        return;
+      hasClickedProjects = true;
+      writeText("live projects", "projectsTitle", function() {
+        var index = 1;
+        var interval = setInterval(function() {
+          var el = document.getElementById("project" + index);
+          if (el == null) {
+            clearInterval(interval);
+            return;
+          }
+          index++;
+          el.style.display = "";
+        }, 270);
+      });
     }
   }
+  
+  var hasClickedProjects = false;
 
   // Various fields/functions for the "user typing" effect
   var cursorContainer;
@@ -14,7 +30,7 @@
   var cursorInterval;
   var writing;
   var headerTimer;
-  function writeText(txt, id) {
+  function writeText(txt, id, followup) {
     if (cursorContainer) {
       $(cursorContainer).innerHTML = writing;
       if (headerTimer) clearInterval(headerTimer);
@@ -27,10 +43,12 @@
       if (writeIndex > txt.length) {
         clearInterval(headerTimer);
         cursorInterval = setInterval(flashCursor, 500);
+        if (followup)
+          followup();
       } else {
         $(id).innerHTML = txt.substring(0, writeIndex++) + "|";
       }
-    }, 90);
+    }, 70);
   }
   function flashCursor() {
     var s = $(cursorContainer).innerHTML;
