@@ -28,16 +28,19 @@ body {
 }
 
 .innerbox {
-  /* max-width: 400px; */
   padding: 2em;
 }
 
+/* mobile view */
 @media all and (max-width: 900px) {
   #container {
     flex-direction: column;
   }
   .innerbox {
     width: 100%;
+  }
+  #vertpad {
+    display: none;
   }
 }
 
