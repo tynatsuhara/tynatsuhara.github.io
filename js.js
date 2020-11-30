@@ -5,7 +5,6 @@ const COLORS = [
     "#5da3b3",  // gray blue
     "#c75065",  // red
     "#7d4cad",  // purp
-    "#a862a1",  // pinkish purp
     "#383838",  // gray
 ]
 const COLOR = COLORS[Math.floor(Math.random() * (COLORS.length))]
