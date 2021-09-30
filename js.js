@@ -1,7 +1,7 @@
 const KINDA_WHITE = "#f8f8f8"
 const COLORS = [
     "#68a691",  // green
-    "#5c6e6d",  // sage
+    "#4e7876",  // sage
     "#4f759b",  // blue
     "#1e606e",  // green blue
     "#c75065",  // red
