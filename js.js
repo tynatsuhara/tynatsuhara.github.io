@@ -1,3 +1,5 @@
+const SIDE_A = "a"
+const SIDE_B = "b"
 const KINDA_WHITE = "#f8f8f8"
 const COLORS = [
     "#68a691",  // green
@@ -10,17 +12,13 @@ const COLORS = [
 ]
 
 let colorIndex = Math.floor(Math.random() * (COLORS.length))
-const highlighedSide = Math.random() > 0.5 ? "a" : "b"
-
-function otherSide(id) {
-    return id === "a" ? "b" : "a"
-}
+const highlighedSide = Math.random() > 0.5 ? SIDE_A : SIDE_B
 
 function colorize(id) {
     const el = document.getElementById(id)
     el.style.color = COLORS[colorIndex]
     el.style.backgroundColor = KINDA_WHITE
-    const el2 = document.getElementById(otherSide(id))
+    const el2 = document.getElementById(id === SIDE_A ? SIDE_B : SIDE_A)
     el2.style.color = KINDA_WHITE
     el2.style.backgroundColor = COLORS[colorIndex]
 }
