@@ -23,11 +23,11 @@ function colorize(id) {
     el2.style.backgroundColor = COLORS[colorIndex]
 }
 
-colorize(highlighedSide);
+colorize(highlighedSide)
 
 document.onkeydown = (e) => {
     if (e.key === "Enter") {
         colorIndex = (colorIndex + 1) % COLORS.length
-        colorize(highlighedSide);
+        colorize(highlighedSide)
     }
 }
