@@ -70,11 +70,12 @@ h2 {
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline solid transparent;
+  transition: .25s;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline solid;
 }
 
 b {
