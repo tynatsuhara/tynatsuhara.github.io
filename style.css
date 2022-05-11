@@ -31,22 +31,6 @@ body {
   padding: 2em;
 }
 
-/* mobile view */
-@media all and (max-width: 900px) {
-  #container {
-    flex-direction: column;
-  }
-  .innerbox {
-    width: 100%;
-  }
-  .innerbox > div {
-    margin-bottom: 1em;
-  }
-  #vertpad {
-    display: none;
-  }
-}
-
 #a {
   background-color: #f8f8f8;
 }
@@ -74,13 +58,38 @@ h2 {
 a {
   color: inherit;
   text-decoration: underline solid transparent;
-  transition: text-decoration .25s;
+  transition: text-decoration .25s, margin .25s;
+  white-space: nowrap;
 }
 
 a:hover {
-  text-decoration: underline solid;
+  /* text-decoration: underline solid; */
+  margin-left: .5em;
+  margin-right: -.5em;
 }
 
 b {
   font-weight: 600;
+}
+
+/* mobile view */
+@media all and (max-width: 900px) {
+  #container {
+    flex-direction: column;
+  }
+  .innerbox {
+    width: 100%;
+  }
+  .innerbox > div {
+    margin-bottom: 1em;
+  }
+  #vertpad {
+    display: none;
+  }
+  a {
+    white-space: normal;
+  }
+  a:hover {
+    margin: 0;
+  }
 }
