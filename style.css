@@ -39,6 +39,9 @@ body {
   .innerbox {
     width: 100%;
   }
+  .innerbox > div {
+    margin-bottom: 1em;
+  }
   #vertpad {
     display: none;
   }
