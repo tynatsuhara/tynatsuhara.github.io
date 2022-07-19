@@ -23,7 +23,7 @@ function colorize(id) {
 colorize(highlighedSide)
 
 document.onkeydown = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "c") {
         colorIndex = (colorIndex + 1) % COLORS.length
         colorize(highlighedSide)
     }
