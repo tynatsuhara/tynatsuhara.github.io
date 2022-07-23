@@ -81,7 +81,7 @@ b {
     width: 100%;
   }
   .innerbox > div {
-    margin-bottom: 1em;
+    padding: .62em 0;
   }
   #vertpad {
     display: none;
