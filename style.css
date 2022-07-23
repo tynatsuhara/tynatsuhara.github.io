@@ -58,7 +58,7 @@ h2 {
 a {
   color: inherit;
   text-decoration: underline solid transparent;
-  transition: text-decoration .25s, margin .25s;
+  transition: /*text-decoration .25s,*/ margin .25s;
   white-space: nowrap;
 }
 
