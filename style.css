@@ -6,7 +6,7 @@ body {
   margin: 0;
   height: 100%;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.1em;
+  font-size: 1.125rem;
   font-weight: 400;
 }
 
@@ -28,7 +28,11 @@ body {
 }
 
 .innerbox {
-  padding: 2em;
+  padding: 2rem;
+}
+
+.innerbox > div {
+  padding-bottom: .25rem;
 }
 
 #a {
@@ -42,30 +46,41 @@ body {
 h1 {
   margin-block-start: 0;
   margin-block-end: 0;
-  font-size: 2em;
+  font-size: 2.5rem;
   font-style: italic;
   font-weight: 900;
 }
 
 h2 {
   margin-block-start: 0;
-  margin-block-end: 1.5em;
-  font-size: 1.1em;
+  margin-block-end: 1.5rem;
+  font-size: 1.125rem;
   font-style: italic;
   font-weight: 400;
 }
 
 a {
   color: inherit;
-  text-decoration: underline solid transparent;
-  transition: /*text-decoration .25s,*/ margin .25s;
+  text-decoration: none !important;
+  /* transition: text-decoration .25s, margin .25s; */
   white-space: nowrap;
+  display: inline-block;
 }
 
-a:hover {
-  /* text-decoration: underline solid; */
-  margin-left: .5em;
-  margin-right: -.5em;
+a .underline {
+  content: '';
+  width: 0;
+  display: block;
+  height: .125rem;
+  transition: width .33s;
+}
+
+a .underline, .vertpad {
+  margin-top: .125rem;
+}
+
+a:hover .underline, a:focus .underline {
+  width: 100%;
 }
 
 b {
@@ -81,9 +96,9 @@ b {
     width: 100%;
   }
   .innerbox > div {
-    padding: .62em 0;
+    padding: .62rem 0;
   }
-  #vertpad {
+  .vertpad {
     display: none;
   }
   a {

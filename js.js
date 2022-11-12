@@ -11,13 +11,27 @@ const COLORS = [
 let colorIndex = Math.floor(Math.random() * (COLORS.length))
 const highlighedSide = Math.random() > 0.5 ? SIDE_A : SIDE_B
 
-function colorize(id) {
+const colorizeLinks = (parentElement, color) => {
+    Array.from(parentElement.getElementsByTagName("a")).forEach(l => {
+        const underline = document.createElement("div")
+        underline.className = 'underline'
+        underline.style.backgroundColor = color
+        l.appendChild(underline)
+    })
+}
+
+const colorize = (id) => {
+    document.querySelectorAll(".underline").forEach(el => el.remove());
+
+    const selectedColor = COLORS[colorIndex]
     const el = document.getElementById(id)
-    el.style.color = COLORS[colorIndex]
+    el.style.color = selectedColor
     el.style.backgroundColor = KINDA_WHITE
+    colorizeLinks(el, selectedColor)
     const el2 = document.getElementById(id === SIDE_A ? SIDE_B : SIDE_A)
     el2.style.color = KINDA_WHITE
-    el2.style.backgroundColor = COLORS[colorIndex]
+    el2.style.backgroundColor = selectedColor
+    colorizeLinks(el2, KINDA_WHITE)
 }
 
 colorize(highlighedSide)
