@@ -68,6 +68,7 @@ a {
 }
 
 a .underline {
+  margin-top: .125rem;
   content: '';
   width: 0;
   display: block;
@@ -75,8 +76,8 @@ a .underline {
   transition: width .33s;
 }
 
-a .underline, .vertpad {
-  margin-top: .125rem;
+.vertpad {
+  margin-top: .25rem;
 }
 
 a:hover .underline, a:focus .underline {
