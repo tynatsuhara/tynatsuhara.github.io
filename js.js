@@ -21,13 +21,16 @@ const colorizeLinks = (parentElement, color) => {
 }
 
 const colorize = (id) => {
+    // these get injected dynamically, and take up space, so don't keep adding more
     document.querySelectorAll(".underline").forEach(el => el.remove());
 
     const selectedColor = COLORS[colorIndex]
+
     const el = document.getElementById(id)
     el.style.color = selectedColor
     el.style.backgroundColor = KINDA_WHITE
     colorizeLinks(el, selectedColor)
+    
     const el2 = document.getElementById(id === SIDE_A ? SIDE_B : SIDE_A)
     el2.style.color = KINDA_WHITE
     el2.style.backgroundColor = selectedColor
