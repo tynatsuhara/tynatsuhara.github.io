@@ -80,7 +80,7 @@ a .underline {
   margin-top: .25rem;
 }
 
-a:hover .underline, a:focus .underline {
+a:hover .underline {
   width: 100%;
 }
 
