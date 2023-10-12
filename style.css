@@ -35,7 +35,7 @@ body {
 }
 
 .innerbox > div {
-  margin-top: 1.125rem;
+  margin-top: 1.5rem;
   padding-bottom: .25rem;
   line-height: 1.6;
 }
@@ -43,10 +43,9 @@ body {
 h1 {
   margin-block-start: 0;
   margin-block-end: 0;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-style: italic;
   font-weight: 900;
-  margin-bottom: 1.125rem;
 }
 
 h2 {
