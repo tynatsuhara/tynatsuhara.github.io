@@ -49,7 +49,7 @@ h1 {
 }
 
 h2 {
-  margin: 0;
+  margin: 0 0 .25rem 0;
   font-size: 1.125rem;
   font-style: italic;
   font-weight: 400;
@@ -96,7 +96,7 @@ b {
 }
 
 #acting > div {
-  margin-bottom: .25rem;
+  margin-bottom: .5rem;
 }
 
 /* mobile view */
