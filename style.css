@@ -61,7 +61,6 @@ a {
   text-decoration: none !important;
   white-space: nowrap;
   display: inline-block;
-  transition: background-color .25s ease-in-out;
 }
 
 a .underline {
