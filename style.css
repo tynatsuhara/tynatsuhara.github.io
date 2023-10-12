@@ -1,5 +1,7 @@
 html {
   height: 100%;
+  background-color: #f8f8f8;
+  color: #37364e;
 }
 
 body {
@@ -29,18 +31,13 @@ body {
 
 .innerbox {
   padding: 2rem;
+  max-width: 400px;
 }
 
 .innerbox > div {
+  margin-top: 1.125rem;
   padding-bottom: .25rem;
-}
-
-html, #a {
-  background-color: #f8f8f8;
-}
-
-#b {
-  background-color: blue;
+  line-height: 1.6;
 }
 
 h1 {
@@ -49,11 +46,11 @@ h1 {
   font-size: 2.25rem;
   font-style: italic;
   font-weight: 900;
+  margin-bottom: 1.125rem;
 }
 
 h2 {
-  margin-block-start: 0;
-  margin-block-end: 1.75rem;
+  margin: 0;
   font-size: 1.125rem;
   font-style: italic;
   font-weight: 400;
@@ -68,16 +65,18 @@ a {
 }
 
 a .underline {
-  margin-top: .125rem;
+  border-color: #37364e;
   content: '';
-  width: 0;
+  height: 0;
+  border-top: 2px dotted;
+  margin-bottom: -2px;
   display: block;
   height: .125rem;
-  transition: width .33s;
 }
 
-.vertpad {
-  margin-top: .25rem;
+a:hover {
+  background-color: #efeffb;
+  transition: background-color .25s;
 }
 
 a:hover .underline {
@@ -88,6 +87,20 @@ b {
   font-weight: 600;
 }
 
+#acting {
+  max-height: 0; 
+  overflow: hidden;
+}
+
+#acting.open {
+  max-height: 1000px;
+  transition: max-height .75s ease-in;
+}
+
+#acting > div {
+  margin-bottom: .25rem;
+}
+
 /* mobile view */
 @media all and (max-width: 900px) {
   #container {
@@ -95,9 +108,6 @@ b {
   }
   .innerbox {
     width: 100%;
-  }
-  .innerbox > div {
-    padding: .62rem 0;
   }
   .vertpad {
     display: none;
