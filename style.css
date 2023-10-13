@@ -61,24 +61,21 @@ a {
   text-decoration: none !important;
   white-space: nowrap;
   display: inline-block;
+  transition: background-color .25s ease-in-out;
 }
 
-a .underline {
+a::after {
   border-color: #37364e;
   content: '';
-  height: 0;
   border-top: 2px dotted;
   margin-bottom: -2px;
   display: block;
   height: .125rem;
+  width: 100%;
 }
 
 a:hover {
   background-color: #efeffb;
-}
-
-a:hover .underline {
-  width: 100%;
 }
 
 b {
@@ -109,13 +106,7 @@ b {
   .innerbox {
     width: 100%;
   }
-  .vertpad {
-    display: none;
-  }
   a {
     white-space: normal;
-  }
-  a:hover {
-    margin: 0;
   }
 }
