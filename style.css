@@ -86,12 +86,14 @@ b {
 }
 
 #acting {
+  opacity: 0;
   max-height: 0; 
   overflow: hidden;
-  transition: max-height .75s ease-in-out;
+  transition: max-height 1.5s ease-in-out, opacity .75s ease-in-out;
 }
 
 #acting.open {
+  opacity: 1;
   max-height: 1000px;
 }
 

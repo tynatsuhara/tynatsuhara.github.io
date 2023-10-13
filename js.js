@@ -16,10 +16,6 @@ const showActingStuff = () => {
 window.onload = () => {
     // add this after load to prevent an ugly transition on page load
     var styleSheet = document.createElement("style")
-    styleSheet.innerText = ```
-        a {
-            transition: background-color .25s ease-in-out;
-        }
-    ```
+    styleSheet.innerText =  "a { transition: background-color .25s ease-in-out; }"
     document.head.appendChild(styleSheet)
 }
